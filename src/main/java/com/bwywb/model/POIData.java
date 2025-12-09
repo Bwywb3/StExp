@@ -11,8 +11,8 @@ public class POIData implements Serializable {
     private String business_id;
     private String user_id;
     private String review_id;
-    private double longitude;         // 经度
-    private double latitude;         // 纬度
+    private double x;         // 经度
+    private double y;         // 纬度
     private long timestamp;   // 事件时间戳 (Unix epoch time)
     // 其他属性 (例如: 评分 AttrCode)
     private Map<String, Object> attributes = new HashMap<>();
@@ -21,8 +21,8 @@ public class POIData implements Serializable {
         this.business_id = business_id;
         this.user_id = user_id;
         this.review_id = review_id;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.x = longitude;
+        this.y = latitude;
         this.timestamp = timestamp;
         this.attributes = attributes;
     }
@@ -39,12 +39,12 @@ public class POIData implements Serializable {
         return review_id;
     }
 
-    public double getLongitude() {
-        return longitude;
+    public double getX() {
+        return x;
     }
 
-    public double getLatitude() {
-        return latitude;
+    public double getY() {
+        return y;
     }
 
     public long getTimestamp() {
